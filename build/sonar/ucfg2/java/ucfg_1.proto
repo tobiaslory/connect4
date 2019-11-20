@@ -1,0 +1,49 @@
+
+GameBoard#isNotOver()Z9
+/C:\data_science\swt\connect4\src\GameBoard.java ("7*º
+29
+/C:\data_science\swt\connect4\src\GameBoard.java6 (Au
+s
+9
+/C:\data_science\swt\connect4\src\GameBoard.java6 (C
+%3boolean"GameBoard#winDiagonal()Z*
+	GameBoard*
+1*¿
+49
+/C:\data_science\swt\connect4\src\GameBoard.java" (/w
+u
+9
+/C:\data_science\swt\connect4\src\GameBoard.java" (1
+%2boolean"GameBoard#winHorizontal()Z*
+	GameBoard*
+2
+1*À
+59
+/C:\data_science\swt\connect4\src\GameBoard.java (u
+s
+9
+/C:\data_science\swt\connect4\src\GameBoard.java (
+%1boolean"GameBoard#winVertical()Z*
+	GameBoard*	
+2
+4
+1*ƒ
+69
+/C:\data_science\swt\connect4\src\GameBoard.java ("C
+9
+/C:\data_science\swt\connect4\src\GameBoard.java (
+""*Â
+79
+/C:\data_science\swt\connect4\src\GameBoard.java (zx
+9
+/C:\data_science\swt\connect4\src\GameBoard.java (
+%0boolean"GameBoard#isFull()Z*
+	GameBoard2isFull()*
+5
+6*ƒ
+19
+/C:\data_science\swt\connect4\src\GameBoard.java (D"C
+9
+/C:\data_science\swt\connect4\src\GameBoard.java (D
+""B
+	GameBoard

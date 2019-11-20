@@ -1,0 +1,42 @@
+
+)Player#getMoveHuman(Ljava/util/Scanner;)I6
+,C:\data_science\swt\connect4\src\Player.java ("1*È
+16
+,C:\data_science\swt\connect4\src\Player.java (c
+a
+6
+,C:\data_science\swt\connect4\src\Player.java (
+%0java.io.PrintStream"__id*
+""n
+l
+6
+,C:\data_science\swt\connect4\src\Player.java (
+%1java.lang.String"__id**
+Player"
+nameŒ
+‰
+6
+,C:\data_science\swt\connect4\src\Player.java (3
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+: Enter Column:ÍÊ
+6
+,C:\data_science\swt\connect4\src\Player.java (4
+
+%3void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%0java.io.PrintStream*
+
+%2java.lang.String2println(Ljava/lang/String;)”‘
+6
+,C:\data_science\swt\connect4\src\Player.java (%	
+%4int"java.util.Scanner#nextInt()I*#
+!
+input_readerjava.util.Scanner2	nextInt()"@
+6
+,C:\data_science\swt\connect4\src\Player.java (*
+"":!
+input_readerjava.util.ScannerB
+
+Player

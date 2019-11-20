@@ -1,0 +1,132 @@
+
+GameBoard#winDiagonal()Z9
+/C:\data_science\swt\connect4\src\GameBoard.java ("38"16"39"28"17"6"29"7"22"1*Ã
+389
+/C:\data_science\swt\connect4\src\GameBoard.java; (<[
+Y
+9
+/C:\data_science\swt\connect4\src\GameBoard.java; (<	
+%0int"__id*
+	
+%2int*%
+38
+16
+28
+39
+17
+6
+29
+7
+22
+1*¯
+169
+/C:\data_science\swt\connect4\src\GameBoard.java&; &(<[
+Y
+9
+/C:\data_science\swt\connect4\src\GameBoard.java&; &(<	
+%6int"__id*
+	
+%8int*
+16
+6
+17
+7
+1*Ã
+399
+/C:\data_science\swt\connect4\src\GameBoard.java7 (8[
+Y
+9
+/C:\data_science\swt\connect4\src\GameBoard.java7 (8	
+%0int"__id*
+	
+%1int*%
+38
+16
+28
+39
+17
+6
+29
+7
+22
+1*¯
+179
+/C:\data_science\swt\connect4\src\GameBoard.java&7 &(8[
+Y
+9
+/C:\data_science\swt\connect4\src\GameBoard.java&7 &(8	
+%6int"__id*
+	
+%7int*
+16
+6
+17
+7
+1*§
+69
+/C:\data_science\swt\connect4\src\GameBoard.java+; +(<\
+Z
+9
+/C:\data_science\swt\connect4\src\GameBoard.java+; +(<	
+%9int"__id*
+
+
+%11int*	
+6
+7
+1*»
+289
+/C:\data_science\swt\connect4\src\GameBoard.java; (<[
+Y
+9
+/C:\data_science\swt\connect4\src\GameBoard.java; (<	
+%3int"__id*
+	
+%5int*
+16
+28
+17
+6
+29
+7
+22
+1*§
+79
+/C:\data_science\swt\connect4\src\GameBoard.java+7 +(8\
+Z
+9
+/C:\data_science\swt\connect4\src\GameBoard.java+7 +(8	
+%9int"__id*
+
+
+%10int*	
+6
+7
+1*»
+299
+/C:\data_science\swt\connect4\src\GameBoard.java7 (8[
+Y
+9
+/C:\data_science\swt\connect4\src\GameBoard.java7 (8	
+%3int"__id*
+	
+%4int*
+16
+28
+17
+6
+29
+7
+22
+1*„
+229
+/C:\data_science\swt\connect4\src\GameBoard.java# #("C
+9
+/C:\data_science\swt\connect4\src\GameBoard.java# #(
+""*ƒ
+19
+/C:\data_science\swt\connect4\src\GameBoard.java/ /("C
+9
+/C:\data_science\swt\connect4\src\GameBoard.java/ /(
+""B
+	GameBoard

@@ -1,0 +1,30 @@
+
+$Player#getMove(Ljava/util/Scanner;)I6
+,C:\data_science\swt\connect4\src\Player.java ("2"1*å
+26
+,C:\data_science\swt\connect4\src\Player.java (f
+d
+6
+,C:\data_science\swt\connect4\src\Player.java (	
+%0int"Player#getMoveAi()I*
+
+Player"@
+6
+,C:\data_science\swt\connect4\src\Player.java (
+""*¢
+16
+,C:\data_science\swt\connect4\src\Player.java (¢
+Ÿ
+6
+,C:\data_science\swt\connect4\src\Player.java (-	
+%1int")Player#getMoveHuman(Ljava/util/Scanner;)I*
+
+Player*#
+!
+input_readerjava.util.Scanner"@
+6
+,C:\data_science\swt\connect4\src\Player.java (.
+"":!
+input_readerjava.util.ScannerB
+
+Player
