@@ -3,5 +3,5 @@ projectKey=tobiaslory_connect4
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.2779
 dashboardUrl=https://sonarcloud.io/dashboard?id=tobiaslory_connect4
-ceTaskId=AW6E-PXlvrjdDHHZW3uF
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AW6E-PXlvrjdDHHZW3uF
+ceTaskId=AW6G2aQbjEgPNufReovJ
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AW6G2aQbjEgPNufReovJ
