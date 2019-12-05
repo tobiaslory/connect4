@@ -124,7 +124,7 @@ class GameBoard {
 
     }
 
-    static class InvalidMoveException extends Throwable {
+    static class InvalidMoveException extends Exception {
         InvalidMoveException(String s) {
             super(s);
         }

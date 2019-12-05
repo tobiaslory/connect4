@@ -10,14 +10,10 @@ class Player {
     private final String name;
     private Random move;
 
-    Player(boolean isAi, String name) {
+    Player(boolean isAi, String name) throws NoSuchAlgorithmException {
         this.isAi = isAi;
         this.name = name;
-        try {
-            move = SecureRandom.getInstanceStrong();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+        move = SecureRandom.getInstanceStrong();
     }
 
     int getMove(Scanner inputReader) {

@@ -1,48 +1,60 @@
 package org.connect4;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 class Connect4 {
+    private static final Logger log = Logger.getLogger(Connect4.class.getName());
+
     public static void main(String[] args) {
         boolean endGame = false;
         Scanner inputReader = new Scanner(System.in);
 
         System.out.println("Welcome to connect 4.");
         while (!endGame) {
-            boolean versusAi = isVersus_ai(inputReader);
+            boolean versusAi = isVersusAi(inputReader);
 
-            GameHandler game = new GameHandler(versusAi);
-            while (game.isNotOver()) {
+            GameHandler game = null;
+            try {
+                game = new GameHandler(versusAi);
+            } catch (NoSuchAlgorithmException e) {
+                log.severe(e.getMessage());
+            }
+            if (game != null) {
+                while (game.isNotOver()) {
+                    try {
+                        System.out.println(game.toString());
+                        game.makeMove(inputReader);
+                    } catch (GameBoard.InvalidMoveException e) {
+                        System.out.println(e.getMessage());
+                    } catch (Exception e) {
+                        log.severe(e.getMessage());
+                    }
+                }
+
                 try {
                     System.out.println(game.toString());
-                    game.makeMove(inputReader);
-                } catch (GameBoard.InvalidMoveException e) {
+                    String winner = game.getWinner();
+                    System.out.println(winner);
+                } catch (InvalidStateException e) {
                     System.out.println(e.getMessage());
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    log.severe(e.getMessage());
                 }
             }
-            try {
-                System.out.println(game.toString());
-                String winner = game.getWinner();
-                System.out.println(winner);
-            } catch (InvalidStateException e) {
-                System.out.println(e.getMessage());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
 
-            endGame = isEnd_game(inputReader);
+            endGame = isEndGame(inputReader);
 
         }
     }
 
-    private static boolean isEnd_game(Scanner input_reader) {
+    private static boolean isEndGame(Scanner inputReader) {
         boolean endGame = false;
         boolean playAgain = false;
         while (!playAgain) {
             System.out.println("Start a new round?(y/n):");
-            String answer = input_reader.next();
+            String answer = inputReader.next();
             if (answer.equalsIgnoreCase("y")) {
                 playAgain = true;
             } else if (answer.equalsIgnoreCase("n")) {
@@ -55,12 +67,12 @@ class Connect4 {
         return endGame;
     }
 
-    private static boolean isVersus_ai(Scanner input_reader) {
+    private static boolean isVersusAi(Scanner inputReader) {
         boolean playersSet = false;
         boolean versusAi = false;
         while (!playersSet) {
             System.out.println("Enter number of human players(1-2):");
-            int numberOfPlayers = input_reader.nextInt();
+            int numberOfPlayers = inputReader.nextInt();
             if (0 < numberOfPlayers && numberOfPlayers < 3) {
                 playersSet = true;
                 versusAi = numberOfPlayers == 1;

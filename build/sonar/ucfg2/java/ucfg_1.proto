@@ -1,49 +1,71 @@
 
-GameBoard#isNotOver()Z9
-/C:\data_science\swt\connect4\src\GameBoard.java ("7*º
-29
-/C:\data_science\swt\connect4\src\GameBoard.java6 (Au
-s
-9
-/C:\data_science\swt\connect4\src\GameBoard.java6 (C
-%3boolean"GameBoard#winDiagonal()Z*
-	GameBoard*
-1*¿
-49
-/C:\data_science\swt\connect4\src\GameBoard.java" (/w
-u
-9
-/C:\data_science\swt\connect4\src\GameBoard.java" (1
-%2boolean"GameBoard#winHorizontal()Z*
-	GameBoard*
+6org.connect4.Connect4#isEnd_game(Ljava/util/Scanner;)ZE
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java( ((%"6"1*±
+2E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java4 4(r
+p
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java4 4(
+%5java.io.PrintStream"__id*
+""èå
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java4 4(F
+
+%6void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%5java.io.PrintStream*$"
+ Input not recognized. Try again.2println(Ljava/lang/String;)*
+6
+1*´
+4E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java0 0(ÜÙ
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java0 0(3
+%4boolean"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
+
+answerjava.lang.String*
+n2$equalsIgnoreCase(Ljava/lang/String;)*	
 2
-1*À
-59
-/C:\data_science\swt\connect4\src\GameBoard.java (u
-s
-9
-/C:\data_science\swt\connect4\src\GameBoard.java (
-%1boolean"GameBoard#winVertical()Z*
-	GameBoard*	
-2
+6
+1*Ò
+6E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java, ,(r
+p
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java, ,(
+%0java.io.PrintStream"__id*
+""àÝ
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java, ,(:
+
+%1void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%0java.io.PrintStream*
+Start a new round?(y/n):2println(Ljava/lang/String;)»¸
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java- -(/
+%2java.lang.String"*java.util.Scanner#next()Ljava/lang/String;*#
+!
+input_readerjava.util.Scanner2next()†
+ƒ
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java- -(0
+answerjava.lang.String"__id*
+
+%2java.lang.StringÜÙ
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java. .(,
+%3boolean"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
+
+answerjava.lang.String*
+y2$equalsIgnoreCase(Ljava/lang/String;)*	
 4
-1*ƒ
-69
-/C:\data_science\swt\connect4\src\GameBoard.java ("C
-9
-/C:\data_science\swt\connect4\src\GameBoard.java (
-""*Â
-79
-/C:\data_science\swt\connect4\src\GameBoard.java (zx
-9
-/C:\data_science\swt\connect4\src\GameBoard.java (
-%0boolean"GameBoard#isFull()Z*
-	GameBoard2isFull()*
-5
-6*ƒ
-19
-/C:\data_science\swt\connect4\src\GameBoard.java (D"C
-9
-/C:\data_science\swt\connect4\src\GameBoard.java (D
-""B
-	GameBoard
+6
+1*›
+1E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java7 7("O
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java7 7(
+"":!
+input_readerjava.util.ScannerB"
+org.connect4.Connect4

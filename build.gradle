@@ -10,6 +10,11 @@ apply plugin: 'idea'
 cleanIdea
 idea
 
+repositories {
+    mavenCentral()
+}
+
+
 sonarqube {
     properties {
         property "sonar.projectKey", "tobiaslory_connect4"
@@ -20,4 +25,17 @@ sonarqube {
 }
 
 sourceSets.main.java.srcDirs = ['src']
-mainClassName = 'Connect4'
+mainClassName = 'org.connect4.Connect4'
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    implementation 'org.junit.jupiter:junit-jupiter:5.5.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+run {
+    standardInput = System.in
+}

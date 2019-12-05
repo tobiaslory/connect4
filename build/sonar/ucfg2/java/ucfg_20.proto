@@ -1,0 +1,20 @@
+
+%org.connect4.GameHandler#isNotOver()ZH
+>C:\data_science\swt\connect4\src\org\connect4\GameHandler.java ("1*ï
+1H
+>C:\data_science\swt\connect4\src\org\connect4\GameHandler.java (š
+—
+H
+>C:\data_science\swt\connect4\src\org\connect4\GameHandler.java (
+%0org.connect4.GameBoard"__id*'*%
+org.connect4.GameHandler"
+board®«
+H
+>C:\data_science\swt\connect4\src\org\connect4\GameHandler.java ( 
+%1boolean"#org.connect4.GameBoard#isNotOver()Z*
+
+%0org.connect4.GameBoard2isNotOver()"R
+H
+>C:\data_science\swt\connect4\src\org\connect4\GameHandler.java (!
+""B
+org.connect4.GameHandler

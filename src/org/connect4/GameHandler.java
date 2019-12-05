@@ -1,5 +1,6 @@
 package org.connect4;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
 class GameHandler {
@@ -8,7 +9,7 @@ class GameHandler {
     private final Player playerTwo;
     private boolean playerOneTurn;
 
-    GameHandler(boolean versusAi) {
+    GameHandler(boolean versusAi) throws NoSuchAlgorithmException {
         board = new GameBoard(7, 6);
         playerOne = new Player(false, "Player 1");
         playerTwo = new Player(versusAi, "Player 2");

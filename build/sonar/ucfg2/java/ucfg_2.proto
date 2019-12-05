@@ -1,132 +1,48 @@
 
-GameBoard#winDiagonal()Z9
-/C:\data_science\swt\connect4\src\GameBoard.java ("38"16"39"28"17"6"29"7"22"1*Ã
-389
-/C:\data_science\swt\connect4\src\GameBoard.java; (<[
-Y
-9
-/C:\data_science\swt\connect4\src\GameBoard.java; (<	
-%0int"__id*
-	
-%2int*%
-38
-16
-28
-39
-17
-6
-29
-7
-22
-1*¯
-169
-/C:\data_science\swt\connect4\src\GameBoard.java&; &(<[
-Y
-9
-/C:\data_science\swt\connect4\src\GameBoard.java&; &(<	
-%6int"__id*
-	
-%8int*
-16
-6
-17
-7
-1*Ã
-399
-/C:\data_science\swt\connect4\src\GameBoard.java7 (8[
-Y
-9
-/C:\data_science\swt\connect4\src\GameBoard.java7 (8	
-%0int"__id*
-	
-%1int*%
-38
-16
-28
-39
-17
-6
-29
-7
-22
-1*¯
-179
-/C:\data_science\swt\connect4\src\GameBoard.java&7 &(8[
-Y
-9
-/C:\data_science\swt\connect4\src\GameBoard.java&7 &(8	
-%6int"__id*
-	
-%7int*
-16
-6
-17
-7
-1*§
-69
-/C:\data_science\swt\connect4\src\GameBoard.java+; +(<\
-Z
-9
-/C:\data_science\swt\connect4\src\GameBoard.java+; +(<	
-%9int"__id*
+7org.connect4.Connect4#isVersus_ai(Ljava/util/Scanner;)ZE
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java: :(&"5"1*¿
+2E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.javaD D(r
+p
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.javaD D(
+%3java.io.PrintStream"__id*
+""öó
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.javaD D(T
 
+%4void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%3java.io.PrintStream*20
+.Number not recognized. Must be between 1 or 2.2println(Ljava/lang/String;)*
+5
+1*Ý
+5E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java> >(r
+p
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java> >(
+%0java.io.PrintStream"__id*
+""ëè
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java> >(E
 
-%11int*	
-6
-7
-1*»
-289
-/C:\data_science\swt\connect4\src\GameBoard.java; (<[
-Y
-9
-/C:\data_science\swt\connect4\src\GameBoard.java; (<	
-%3int"__id*
-	
-%5int*
-16
-28
-17
-6
-29
-7
-22
-1*§
-79
-/C:\data_science\swt\connect4\src\GameBoard.java+7 +(8\
-Z
-9
-/C:\data_science\swt\connect4\src\GameBoard.java+7 +(8	
-%9int"__id*
-
-
-%10int*	
-6
-7
-1*»
-299
-/C:\data_science\swt\connect4\src\GameBoard.java7 (8[
-Y
-9
-/C:\data_science\swt\connect4\src\GameBoard.java7 (8	
-%3int"__id*
-	
-%4int*
-16
-28
-17
-6
-29
-7
-22
-1*„
-229
-/C:\data_science\swt\connect4\src\GameBoard.java# #("C
-9
-/C:\data_science\swt\connect4\src\GameBoard.java# #(
-""*ƒ
-19
-/C:\data_science\swt\connect4\src\GameBoard.java/ /("C
-9
-/C:\data_science\swt\connect4\src\GameBoard.java/ /(
-""B
-	GameBoard
+%1void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%0java.io.PrintStream*'%
+#Enter number of human players(1-2):2println(Ljava/lang/String;)£ 
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.java?" ?(8	
+%2int"java.util.Scanner#nextInt()I*#
+!
+input_readerjava.util.Scanner2	nextInt()*	
+2
+5
+1*›
+1E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.javaG G("O
+E
+;C:\data_science\swt\connect4\src\org\connect4\Connect4.javaG G(
+"":!
+input_readerjava.util.ScannerB"
+org.connect4.Connect4
