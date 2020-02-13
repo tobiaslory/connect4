@@ -1,6 +1,6 @@
 package org.connect4;
 
-class GameBoard {
+public class GameBoard {
     private final int width;
     private final int height;
     private final int[][] field;
@@ -8,14 +8,14 @@ class GameBoard {
     private int lastMoveCol;
     private int lastMoveRow;
 
-    GameBoard(int width, int height) {
+    public GameBoard(int width, int height) {
         this.width = width;
         this.height = height;
         field = new int[this.height][this.width];
         lastMovePlayerOne = false;
     }
 
-    boolean isNotOver() {
+    public boolean isNotOver() {
         if (isFull())
             return false;
         return !winVertical() && !winHorizontal() && !winDiagonalSlash() && !winDiagonalBackslash();
@@ -76,7 +76,7 @@ class GameBoard {
         return connected >= 4;
     }
 
-    void makeMove(boolean playerOne, int move) throws InvalidMoveException {
+    public void makeMove(boolean playerOne, int move) throws InvalidMoveException {
         if (move < 0 || move >= width)
             throw new InvalidMoveException("Invalid move. Column not valid.");
         boolean moveMade = false;
@@ -93,14 +93,14 @@ class GameBoard {
         lastMoveCol = move;
     }
 
-    boolean isFull() {
+    public boolean isFull() {
         for (int i = 0; i < width; i++)
             if (field[height - 1][i] == 0)
                 return false;
         return true;
     }
 
-    boolean winnerPlayerOne() throws InvalidStateException {
+    public boolean winnerPlayerOne() throws InvalidStateException {
         if (isFull() || isNotOver())
             throw new InvalidStateException("Game did not end decisively");
         return lastMovePlayerOne;
@@ -124,7 +124,7 @@ class GameBoard {
 
     }
 
-    static class InvalidMoveException extends Exception {
+    public static class InvalidMoveException extends Exception {
         InvalidMoveException(String s) {
             super(s);
         }

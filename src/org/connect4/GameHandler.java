@@ -22,9 +22,9 @@ class GameHandler {
 
     void makeMove(Scanner inputReader) throws GameBoard.InvalidMoveException {
         if (playerOneTurn) {
-            board.makeMove(true, playerOne.getMove(inputReader));
+            board.makeMove(true, playerOne.getMove(inputReader, 7));
         } else {
-            board.makeMove(false, playerTwo.getMove(inputReader));
+            board.makeMove(false, playerTwo.getMove(inputReader, 7));
         }
         playerOneTurn = !playerOneTurn;
     }

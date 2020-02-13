@@ -16,15 +16,15 @@ class Player {
         move = SecureRandom.getInstanceStrong();
     }
 
-    int getMove(Scanner inputReader) {
+    int getMove(Scanner inputReader, int boardWidth) {
         if (isAi)
-            return getMoveAi();
+            return getMoveAi(boardWidth);
         else
             return getMoveHuman(inputReader);
     }
 
-    private int getMoveAi() {
-        return move.nextInt(7);
+    private int getMoveAi(int boardWidth) {
+        return move.nextInt(boardWidth);
     }
 
     private int getMoveHuman(Scanner inputReader) {

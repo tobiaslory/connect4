@@ -21,27 +21,28 @@ class Connect4 {
             } catch (NoSuchAlgorithmException e) {
                 log.severe(e.getMessage());
             }
-            if (game != null) {
-                while (game.isNotOver()) {
-                    try {
-                        System.out.println(game.toString());
-                        game.makeMove(inputReader);
-                    } catch (GameBoard.InvalidMoveException e) {
-                        System.out.println(e.getMessage());
-                    } catch (Exception e) {
-                        log.severe(e.getMessage());
-                    }
-                }
-
+            if (game == null) {
+                return;
+            }
+            while (game.isNotOver()) {
                 try {
                     System.out.println(game.toString());
-                    String winner = game.getWinner();
-                    System.out.println(winner);
-                } catch (InvalidStateException e) {
+                    game.makeMove(inputReader);
+                } catch (GameBoard.InvalidMoveException e) {
                     System.out.println(e.getMessage());
                 } catch (Exception e) {
                     log.severe(e.getMessage());
                 }
+            }
+
+            try {
+                System.out.println(game.toString());
+                String winner = game.getWinner();
+                System.out.println(winner);
+            } catch (InvalidStateException e) {
+                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                log.severe(e.getMessage());
             }
 
             endGame = isEndGame(inputReader);

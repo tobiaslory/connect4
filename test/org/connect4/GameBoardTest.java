@@ -1,5 +1,5 @@
-import org.connect4.GameBoard;
-import org.connect4.InvalidStateException;
+package org.connect4;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 

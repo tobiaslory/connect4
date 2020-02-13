@@ -1,4 +1,4 @@
-install: gradle wrapper
+install: gradle build
 language: java
 before_install:
   - chmod +x gradlew
