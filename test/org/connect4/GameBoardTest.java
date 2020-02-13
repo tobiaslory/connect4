@@ -13,7 +13,7 @@ class GameBoardTest {
 
     @BeforeEach
     void setUp() {
-        testBoard = new GameBoard(7, 6);
+        testBoard = new GameBoard(7, 6, 4);
     }
 
     @AfterEach

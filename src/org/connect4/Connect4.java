@@ -4,9 +4,17 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+/**
+ * @author Tobias Lory
+ */
 class Connect4 {
     private static final Logger log = Logger.getLogger(Connect4.class.getName());
 
+    /**
+     * Main method
+     *
+     * @param args Commandline parameters (unused)
+     */
     public static void main(String[] args) {
         boolean endGame = false;
         Scanner inputReader = new Scanner(System.in);
@@ -50,6 +58,13 @@ class Connect4 {
         }
     }
 
+    /**
+     * After the End of a Match this method asks the player if they want to
+     * start another Match.
+     *
+     * @param inputReader The Scanner object for receiving player input.
+     * @return true if the player wants the program to exit, false otherwise.
+     */
     private static boolean isEndGame(Scanner inputReader) {
         boolean endGame = false;
         boolean playAgain = false;
@@ -68,6 +83,12 @@ class Connect4 {
         return endGame;
     }
 
+    /**
+     * Ask the player whether the opponent will be a human or AI.
+     *
+     * @param inputReader The Scanner object for receiving player input.
+     * @return False if player 2 will be controlled by a human, True otherwise.
+     */
     private static boolean isVersusAi(Scanner inputReader) {
         boolean playersSet = false;
         boolean versusAi = false;
