@@ -1,21 +1,23 @@
 
- org.connect4.Player#getMoveAi()IC
-9C:\data_science\swt\connect4\src\org\connect4\Player.java ("1*√
+!org.connect4.Player#getMoveAi(I)IC
+9C:/data_science/swt/connect4/src/org/connect4/Player.java ("1*≈
 1C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (â
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (â
 Ü
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (
 %0java.util.Random"__id*!*
 org.connect4.Player"
-moveùö
+moveüú
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (	
+9C:/data_science/swt/connect4/src/org/connect4/Player.java ('	
 %1int"java.util.Random#nextInt(I)I*
 
-%0java.util.Random*22
+%0java.util.Random*
+""2
 nextInt(I)"M
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (
+9C:/data_science/swt/connect4/src/org/connect4/Player.java ((
+"":
 ""B
 org.connect4.Player

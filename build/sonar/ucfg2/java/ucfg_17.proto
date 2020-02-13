@@ -1,28 +1,28 @@
 
 6org.connect4.Player#getMoveHuman(Ljava/util/Scanner;)IC
-9C:\data_science\swt\connect4\src\org\connect4\Player.java" "("1*±
+9C:/data_science/swt/connect4/src/org/connect4/Player.java ("1*±
 1C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java# #(p
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (p
 n
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java# #(
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (
 %0java.io.PrintStream"__id*
 ""â
 Ü
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java# #(
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (
 %1java.lang.String"__id*!*
 org.connect4.Player"
 nameô
 ñ
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java# #(3
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (3
 %2java.lang.String"__concat*
 
 %1java.lang.String*
 : Enter Column:⁄◊
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java# #(4
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (4
 
 %3void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
@@ -30,12 +30,12 @@ C
 
 %2java.lang.String2println(Ljava/lang/String;)†ù
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java$ $($	
+9C:/data_science/swt/connect4/src/org/connect4/Player.java   ($	
 %4int"java.util.Scanner#nextInt()I*"
  
 inputReaderjava.util.Scanner2	nextInt()"M
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java$ $()
+9C:/data_science/swt/connect4/src/org/connect4/Player.java   ()
 "": 
 inputReaderjava.util.ScannerB
 org.connect4.Player

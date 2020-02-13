@@ -1,27 +1,29 @@
 
-1org.connect4.Player#getMove(Ljava/util/Scanner;)IC
-9C:\data_science\swt\connect4\src\org\connect4\Player.java ("2"1*¨
+2org.connect4.Player#getMove(Ljava/util/Scanner;I)IC
+9C:/data_science/swt/connect4/src/org/connect4/Player.java ("2"1*±
 2C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (Ž
-‹
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (—
+”
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (	
-%0int" org.connect4.Player#getMoveAi()I*
-org.connect4.Player"M
+9C:/data_science/swt/connect4/src/org/connect4/Player.java ((	
+%0int"!org.connect4.Player#getMoveAi(I)I*
+org.connect4.Player*
+"""M
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (
+9C:/data_science/swt/connect4/src/org/connect4/Player.java ()
 ""*â
 1C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (È
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (È
 Å
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (,	
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (,	
 %1int"6org.connect4.Player#getMoveHuman(Ljava/util/Scanner;)I*
 org.connect4.Player*"
  
 inputReaderjava.util.Scanner"M
 C
-9C:\data_science\swt\connect4\src\org\connect4\Player.java (-
+9C:/data_science/swt/connect4/src/org/connect4/Player.java (-
 "": 
-inputReaderjava.util.ScannerB
+inputReaderjava.util.Scanner:
+""B
 org.connect4.Player
