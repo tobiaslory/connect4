@@ -14,6 +14,10 @@ repositories {
     mavenCentral()
 }
 
+wrapper {
+
+}
+
 jacocoTestReport {
     reports {
         xml.enabled true
@@ -36,6 +40,7 @@ mainClassName = 'org.connect4.Connect4'
 dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
     implementation 'org.junit.jupiter:junit-jupiter:5.5.2'
+    implementation 'org.junit.jupiter:junit-jupiter'
 }
 
 test {

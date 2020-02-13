@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.connect4.GameHandlerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-13T11:25:12" hostname="DESKTOP-0J7K87I" time="0.106">
+<testsuite name="org.connect4.GameHandlerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-13T12:27:01" hostname="DESKTOP-0J7K87I" time="0.11">
   <properties/>
-  <testcase name="testToString()" classname="org.connect4.GameHandlerTest" time="0.055"/>
-  <testcase name="winnerOne()" classname="org.connect4.GameHandlerTest" time="0.017"/>
-  <testcase name="winnerTwo()" classname="org.connect4.GameHandlerTest" time="0.005"/>
-  <testcase name="getWinner()" classname="org.connect4.GameHandlerTest" time="0.014"/>
-  <testcase name="isNotOver()" classname="org.connect4.GameHandlerTest" time="0.002"/>
+  <testcase name="testToString()" classname="org.connect4.GameHandlerTest" time="0.059"/>
+  <testcase name="winnerOne()" classname="org.connect4.GameHandlerTest" time="0.023"/>
+  <testcase name="winnerTwo()" classname="org.connect4.GameHandlerTest" time="0.004"/>
+  <testcase name="getWinner()" classname="org.connect4.GameHandlerTest" time="0.016"/>
+  <testcase name="isNotOver()" classname="org.connect4.GameHandlerTest" time="0.004"/>
   <system-out><![CDATA[Player 1: Enter Column:
 Player 2: Enter Column:
 Player 1: Enter Column:
