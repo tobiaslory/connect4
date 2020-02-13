@@ -1,4 +1,4 @@
-install: gradle build
+install: gradle build jacocoTestReport sonarqube
 language: java
 before_install:
   - chmod +x gradlew
@@ -7,4 +7,4 @@ addons:
     organization: "tobiaslory" # the key of the org you chose at step #3
 script:
   # other script steps might be done before running the actual analysis
-  - sonar-scanner
+# - sonar-scanner
