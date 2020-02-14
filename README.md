@@ -1,5 +1,5 @@
 # Connect4
-The javadoc can be found [here]()
+The javadoc can be found [here](https://tobiaslory.github.io/connect4/javadoc/).
 ## 6. Continous Delivery
 [![Build Status](https://travis-ci.org/tobiaslory/connect4.svg?branch=master)](https://travis-ci.org/tobiaslory/connect4)
 ## 2. Metrics
@@ -15,6 +15,15 @@ The javadoc can be found [here]()
 <img src="resources/state.svg">
 
 ## 3. Clean Code Development
+* Don ́t Repeat Yourself (DRY)
+* Keep it simple, stupid (KISS)
+* Code Communication, Simplicity, Flexibility
+* Avoid Early Optimizations
+* Single Level of Abstraction (SLA)
+* Keep Configurable Data At High Level
+* Over-Configurability
+* Hidden Temporal CouplingRule
+* Don’t Be Arbitrary
 ## 4. Build
 Gradle is used for build management. The configuration is found [here](./gradle.build).
 ## 5. Unit-Tests
@@ -25,5 +34,3 @@ Programmed using IntelliJ IDEA. favourite hotkeys:
 * ctrl+alt+I Auto-Indent Lines
 * ctrl+K commit
 * ctrl+shift+F Find in Path
-## 8. DSL
-## 9. Functional Programming
