@@ -18,7 +18,7 @@ The javadoc can be found [here]()
 ## 4. Build
 Gradle is used for build management. The configuration is found [here](./gradle.build).
 ## 5. Unit-Tests
-Unit-Tests can be found in the folder [test](./test).
+Unit-Tests can be found in the folder [test](./test/org/connect4).
 ## 7. IDE
 Programmed using IntelliJ IDEA. favourite hotkeys:
 * ctrl+alt+L Reformat Code
