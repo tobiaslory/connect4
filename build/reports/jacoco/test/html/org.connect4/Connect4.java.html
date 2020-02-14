@@ -4,84 +4,102 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-<span class="nc" id="L7">class Connect4 {</span>
-<span class="nc" id="L8">    private static final Logger log = Logger.getLogger(Connect4.class.getName());</span>
+/**
+ * @author Tobias Lory
+ */
+<span class="nc" id="L10">class Connect4 {</span>
+<span class="nc" id="L11">    private static final Logger log = Logger.getLogger(Connect4.class.getName());</span>
 
+    /**
+     * Main method
+     * @param args Commandline parameters (unused)
+     */
     public static void main(String[] args) {
-<span class="nc" id="L11">        boolean endGame = false;</span>
-<span class="nc" id="L12">        Scanner inputReader = new Scanner(System.in);</span>
+<span class="nc" id="L18">        boolean endGame = false;</span>
+<span class="nc" id="L19">        Scanner inputReader = new Scanner(System.in);</span>
 
-<span class="nc" id="L14">        System.out.println(&quot;Welcome to connect 4.&quot;);</span>
-<span class="nc bnc" id="L15" title="All 2 branches missed.">        while (!endGame) {</span>
-<span class="nc" id="L16">            boolean versusAi = isVersusAi(inputReader);</span>
+<span class="nc" id="L21">        System.out.println(&quot;Welcome to connect 4.&quot;);</span>
+<span class="nc bnc" id="L22" title="All 2 branches missed.">        while (!endGame) {</span>
+<span class="nc" id="L23">            boolean versusAi = isVersusAi(inputReader);</span>
 
-<span class="nc" id="L18">            GameHandler game = null;</span>
+<span class="nc" id="L25">            GameHandler game = null;</span>
             try {
-<span class="nc" id="L20">                game = new GameHandler(versusAi);</span>
-<span class="nc" id="L21">            } catch (NoSuchAlgorithmException e) {</span>
-<span class="nc" id="L22">                log.severe(e.getMessage());</span>
-<span class="nc" id="L23">            }</span>
-<span class="nc bnc" id="L24" title="All 2 branches missed.">            if (game == null) {</span>
-<span class="nc" id="L25">                return;</span>
+<span class="nc" id="L27">                game = new GameHandler(versusAi);</span>
+<span class="nc" id="L28">            } catch (NoSuchAlgorithmException e) {</span>
+<span class="nc" id="L29">                log.severe(e.getMessage());</span>
+<span class="nc" id="L30">            }</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">            if (game == null) {</span>
+<span class="nc" id="L32">                return;</span>
             }
-<span class="nc bnc" id="L27" title="All 2 branches missed.">            while (game.isNotOver()) {</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">            while (game.isNotOver()) {</span>
                 try {
-<span class="nc" id="L29">                    System.out.println(game.toString());</span>
-<span class="nc" id="L30">                    game.makeMove(inputReader);</span>
-<span class="nc" id="L31">                } catch (GameBoard.InvalidMoveException e) {</span>
-<span class="nc" id="L32">                    System.out.println(e.getMessage());</span>
-<span class="nc" id="L33">                } catch (Exception e) {</span>
-<span class="nc" id="L34">                    log.severe(e.getMessage());</span>
-<span class="nc" id="L35">                }</span>
+<span class="nc" id="L36">                    System.out.println(game.toString());</span>
+<span class="nc" id="L37">                    game.makeMove(inputReader);</span>
+<span class="nc" id="L38">                } catch (GameBoard.InvalidMoveException e) {</span>
+<span class="nc" id="L39">                    System.out.println(e.getMessage());</span>
+<span class="nc" id="L40">                } catch (Exception e) {</span>
+<span class="nc" id="L41">                    log.severe(e.getMessage());</span>
+<span class="nc" id="L42">                }</span>
             }
 
             try {
-<span class="nc" id="L39">                System.out.println(game.toString());</span>
-<span class="nc" id="L40">                String winner = game.getWinner();</span>
-<span class="nc" id="L41">                System.out.println(winner);</span>
-<span class="nc" id="L42">            } catch (InvalidStateException e) {</span>
-<span class="nc" id="L43">                System.out.println(e.getMessage());</span>
-<span class="nc" id="L44">            } catch (Exception e) {</span>
-<span class="nc" id="L45">                log.severe(e.getMessage());</span>
-<span class="nc" id="L46">            }</span>
+<span class="nc" id="L46">                System.out.println(game.toString());</span>
+<span class="nc" id="L47">                String winner = game.getWinner();</span>
+<span class="nc" id="L48">                System.out.println(winner);</span>
+<span class="nc" id="L49">            } catch (InvalidStateException e) {</span>
+<span class="nc" id="L50">                System.out.println(e.getMessage());</span>
+<span class="nc" id="L51">            } catch (Exception e) {</span>
+<span class="nc" id="L52">                log.severe(e.getMessage());</span>
+<span class="nc" id="L53">            }</span>
 
-<span class="nc" id="L48">            endGame = isEndGame(inputReader);</span>
+<span class="nc" id="L55">            endGame = isEndGame(inputReader);</span>
 
-<span class="nc" id="L50">        }</span>
-<span class="nc" id="L51">    }</span>
+<span class="nc" id="L57">        }</span>
+<span class="nc" id="L58">    }</span>
 
+    /**
+     * After the End of a Match this method asks the player if they want to
+     * start another Match.
+     * @param inputReader The Scanner object for receiving player input.
+     * @return true if the player wants the program to exit, false otherwise.
+     */
     private static boolean isEndGame(Scanner inputReader) {
-<span class="nc" id="L54">        boolean endGame = false;</span>
-<span class="nc" id="L55">        boolean playAgain = false;</span>
-<span class="nc bnc" id="L56" title="All 2 branches missed.">        while (!playAgain) {</span>
-<span class="nc" id="L57">            System.out.println(&quot;Start a new round?(y/n):&quot;);</span>
-<span class="nc" id="L58">            String answer = inputReader.next();</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">            if (answer.equalsIgnoreCase(&quot;y&quot;)) {</span>
-<span class="nc" id="L60">                playAgain = true;</span>
-<span class="nc bnc" id="L61" title="All 2 branches missed.">            } else if (answer.equalsIgnoreCase(&quot;n&quot;)) {</span>
-<span class="nc" id="L62">                playAgain = true;</span>
-<span class="nc" id="L63">                endGame = true;</span>
+<span class="nc" id="L67">        boolean endGame = false;</span>
+<span class="nc" id="L68">        boolean playAgain = false;</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">        while (!playAgain) {</span>
+<span class="nc" id="L70">            System.out.println(&quot;Start a new round?(y/n):&quot;);</span>
+<span class="nc" id="L71">            String answer = inputReader.next();</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">            if (answer.equalsIgnoreCase(&quot;y&quot;)) {</span>
+<span class="nc" id="L73">                playAgain = true;</span>
+<span class="nc bnc" id="L74" title="All 2 branches missed.">            } else if (answer.equalsIgnoreCase(&quot;n&quot;)) {</span>
+<span class="nc" id="L75">                playAgain = true;</span>
+<span class="nc" id="L76">                endGame = true;</span>
             } else {
-<span class="nc" id="L65">                System.out.println(&quot;Input not recognized. Try again.&quot;);</span>
+<span class="nc" id="L78">                System.out.println(&quot;Input not recognized. Try again.&quot;);</span>
             }
-<span class="nc" id="L67">        }</span>
-<span class="nc" id="L68">        return endGame;</span>
+<span class="nc" id="L80">        }</span>
+<span class="nc" id="L81">        return endGame;</span>
     }
 
+    /**
+     * Ask the player whether the opponent will be a human or AI.
+     * @param inputReader The Scanner object for receiving player input.
+     * @return False if player 2 will be controlled by a human, True otherwise.
+     */
     private static boolean isVersusAi(Scanner inputReader) {
-<span class="nc" id="L72">        boolean playersSet = false;</span>
-<span class="nc" id="L73">        boolean versusAi = false;</span>
-<span class="nc bnc" id="L74" title="All 2 branches missed.">        while (!playersSet) {</span>
-<span class="nc" id="L75">            System.out.println(&quot;Enter number of human players(1-2):&quot;);</span>
-<span class="nc" id="L76">            int numberOfPlayers = inputReader.nextInt();</span>
-<span class="nc bnc" id="L77" title="All 4 branches missed.">            if (0 &lt; numberOfPlayers &amp;&amp; numberOfPlayers &lt; 3) {</span>
-<span class="nc" id="L78">                playersSet = true;</span>
-<span class="nc bnc" id="L79" title="All 2 branches missed.">                versusAi = numberOfPlayers == 1;</span>
+<span class="nc" id="L90">        boolean playersSet = false;</span>
+<span class="nc" id="L91">        boolean versusAi = false;</span>
+<span class="nc bnc" id="L92" title="All 2 branches missed.">        while (!playersSet) {</span>
+<span class="nc" id="L93">            System.out.println(&quot;Enter number of human players(1-2):&quot;);</span>
+<span class="nc" id="L94">            int numberOfPlayers = inputReader.nextInt();</span>
+<span class="nc bnc" id="L95" title="All 4 branches missed.">            if (0 &lt; numberOfPlayers &amp;&amp; numberOfPlayers &lt; 3) {</span>
+<span class="nc" id="L96">                playersSet = true;</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">                versusAi = numberOfPlayers == 1;</span>
             } else {
-<span class="nc" id="L81">                System.out.println(&quot;Number not recognized. Must be between 1 or 2.&quot;);</span>
+<span class="nc" id="L99">                System.out.println(&quot;Number not recognized. Must be between 1 or 2.&quot;);</span>
             }
-<span class="nc" id="L83">        }</span>
-<span class="nc" id="L84">        return versusAi;</span>
+<span class="nc" id="L101">        }</span>
+<span class="nc" id="L102">        return versusAi;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

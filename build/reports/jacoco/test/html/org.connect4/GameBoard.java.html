@@ -1,133 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="de"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GameBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">connect4</a> &gt; <a href="index.source.html" class="el_package">org.connect4</a> &gt; <span class="el_source">GameBoard.java</span></div><h1>GameBoard.java</h1><pre class="source lang-java linenums">package org.connect4;
 
+/**
+ * This class represents the game board containing the game pieces.
+ * @author Tobias Lory
+ */
 public class GameBoard {
+    /**
+     * The number of columns of the board.
+     */
     private final int width;
+    /**
+     * The number of rows of the board.
+     */
     private final int height;
+    /**
+     * A matrix storing the state of each game tile.
+     */
     private final int[][] field;
+    /**
+     * The number of pieces in a line required for winning.
+     */
+    private final int piecesForWin;
+    /**
+     * Whether the last executed move was done by player one or two.
+     */
     private boolean lastMovePlayerOne;
+    /**
+     * The column of the last move.
+     */
     private int lastMoveCol;
+    /**
+     * The row of the last move.
+     */
     private int lastMoveRow;
 
-<span class="fc" id="L11">    public GameBoard(int width, int height) {</span>
-<span class="fc" id="L12">        this.width = width;</span>
-<span class="fc" id="L13">        this.height = height;</span>
-<span class="fc" id="L14">        field = new int[this.height][this.width];</span>
-<span class="fc" id="L15">        lastMovePlayerOne = false;</span>
-<span class="fc" id="L16">    }</span>
+    /**
+     * Creates a new game board with the specified dimensions.
+     * @param width the number of columns.
+     * @param height the number of rows.
+     * @param piecesForWin The number of pieces in a line required for winning.
+     */
+<span class="fc" id="L43">    public GameBoard(int width, int height, int piecesForWin) {</span>
+<span class="fc" id="L44">        this.width = width;</span>
+<span class="fc" id="L45">        this.height = height;</span>
+<span class="fc" id="L46">        this.piecesForWin = piecesForWin;</span>
+<span class="fc" id="L47">        field = new int[this.height][this.width];</span>
+<span class="fc" id="L48">        lastMovePlayerOne = false;</span>
+<span class="fc" id="L49">    }</span>
 
+    /**
+     * Determines whether one player has achieved victory
+     * or if the game is over in a draw.
+     * @return true if the game is still ongoing, otherwise false.
+     */
     public boolean isNotOver() {
-<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (isFull())</span>
-<span class="fc" id="L20">            return false;</span>
-<span class="fc bfc" id="L21" title="All 8 branches covered.">        return !winVertical() &amp;&amp; !winHorizontal() &amp;&amp; !winDiagonalSlash() &amp;&amp; !winDiagonalBackslash();</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (isFull())</span>
+<span class="fc" id="L58">            return false;</span>
+<span class="fc bfc" id="L59" title="All 8 branches covered.">        return !winVertical() &amp;&amp; !winHorizontal() &amp;&amp; !winDiagonalSlash() &amp;&amp; !winDiagonalBackslash();</span>
     }
 
+    /**
+     * Check if the last move created of a line of pieces
+     * in a Northeast-Southwest direction
+     * @return true if a the found line is long enough for victory otherwise false.
+     */
     private boolean winDiagonalSlash() {
-<span class="fc" id="L25">        int connected = 1;</span>
-<span class="pc bpc" id="L26" title="1 of 4 branches missed.">        for (int i = lastMoveRow + 1, j = lastMoveCol + 1; i &lt; height &amp;&amp; j &lt; width; i++, j++)</span>
-<span class="pc bpc" id="L27" title="1 of 4 branches missed.">            if (field[i][j] == (lastMovePlayerOne ? 1 : 2))</span>
-<span class="nc" id="L28">                connected++;</span>
+<span class="fc" id="L68">        int connected = 1;</span>
+<span class="pc bpc" id="L69" title="1 of 4 branches missed.">        for (int i = lastMoveRow + 1, j = lastMoveCol + 1; i &lt; height &amp;&amp; j &lt; width; i++, j++)</span>
+<span class="pc bpc" id="L70" title="1 of 4 branches missed.">            if (field[i][j] == (lastMovePlayerOne ? 1 : 2))</span>
+<span class="nc" id="L71">                connected++;</span>
             else
                 break;
-<span class="fc bfc" id="L31" title="All 4 branches covered.">        for (int i = lastMoveRow - 1, j = lastMoveCol - 1; i &gt;= 0 &amp;&amp; j &gt;= 0; i--, j--)</span>
-<span class="pc bpc" id="L32" title="2 of 4 branches missed.">            if (field[i][j] == (lastMovePlayerOne ? 1 : 2))</span>
-<span class="fc" id="L33">                connected++;</span>
+<span class="fc bfc" id="L74" title="All 4 branches covered.">        for (int i = lastMoveRow - 1, j = lastMoveCol - 1; i &gt;= 0 &amp;&amp; j &gt;= 0; i--, j--)</span>
+<span class="pc bpc" id="L75" title="2 of 4 branches missed.">            if (field[i][j] == (lastMovePlayerOne ? 1 : 2))</span>
+<span class="fc" id="L76">                connected++;</span>
             else
                 break;
-<span class="fc bfc" id="L36" title="All 2 branches covered.">        return connected &gt;= 4;</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        return connected &gt;= piecesForWin;</span>
     }
 
+    /**
+     * Check if the last move created of a line of pieces
+     * in a Northwest-Southeast direction
+     * @return true if a the found line is long enough for victory otherwise false.
+     */
     private boolean winDiagonalBackslash() {
-<span class="fc" id="L40">        int connected = 1;</span>
-<span class="pc bpc" id="L41" title="2 of 4 branches missed.">        for (int i = lastMoveRow + 1, j = lastMoveCol - 1; i &lt; height &amp;&amp; j &gt;= 0; i++, j--)</span>
-<span class="nc bnc" id="L42" title="All 4 branches missed.">            if (field[i][j] == (lastMovePlayerOne ? 1 : 2))</span>
-<span class="nc" id="L43">                connected++;</span>
+<span class="fc" id="L88">        int connected = 1;</span>
+<span class="pc bpc" id="L89" title="2 of 4 branches missed.">        for (int i = lastMoveRow + 1, j = lastMoveCol - 1; i &lt; height &amp;&amp; j &gt;= 0; i++, j--)</span>
+<span class="nc bnc" id="L90" title="All 4 branches missed.">            if (field[i][j] == (lastMovePlayerOne ? 1 : 2))</span>
+<span class="nc" id="L91">                connected++;</span>
             else
                 break;
-<span class="pc bpc" id="L46" title="1 of 4 branches missed.">        for (int i = lastMoveRow - 1, j = lastMoveCol + 1; i &gt;= 0 &amp;&amp; j &lt; width; i--, j++)</span>
-<span class="pc bpc" id="L47" title="2 of 4 branches missed.">            if (field[i][j] == (lastMovePlayerOne ? 1 : 2))</span>
-<span class="fc" id="L48">                connected++;</span>
+<span class="pc bpc" id="L94" title="1 of 4 branches missed.">        for (int i = lastMoveRow - 1, j = lastMoveCol + 1; i &gt;= 0 &amp;&amp; j &lt; width; i--, j++)</span>
+<span class="pc bpc" id="L95" title="2 of 4 branches missed.">            if (field[i][j] == (lastMovePlayerOne ? 1 : 2))</span>
+<span class="fc" id="L96">                connected++;</span>
             else
                 break;
-<span class="fc bfc" id="L51" title="All 2 branches covered.">        return connected &gt;= 4;</span>
+<span class="fc bfc" id="L99" title="All 2 branches covered.">        return connected &gt;= piecesForWin;</span>
     }
 
+    /**
+     * Check if there are enough pieces belonging to this player directly below
+     * the last move to suffice for victory.
+     * @return true if a the found line is long enough for victory otherwise false.
+     */
     private boolean winVertical() {
-<span class="fc" id="L55">        int connected = 1;</span>
-<span class="fc bfc" id="L56" title="All 2 branches covered.">        for (int i = lastMoveRow - 1; i &gt;= 0; i--)</span>
-<span class="fc bfc" id="L57" title="All 4 branches covered.">            if (field[i][lastMoveCol] == (lastMovePlayerOne ? 1 : 2))</span>
-<span class="fc" id="L58">                connected++;</span>
+<span class="fc" id="L108">        int connected = 1;</span>
+<span class="fc bfc" id="L109" title="All 2 branches covered.">        for (int i = lastMoveRow - 1; i &gt;= 0; i--)</span>
+<span class="fc bfc" id="L110" title="All 4 branches covered.">            if (field[i][lastMoveCol] == (lastMovePlayerOne ? 1 : 2))</span>
+<span class="fc" id="L111">                connected++;</span>
             else
                 break;
-<span class="fc bfc" id="L61" title="All 2 branches covered.">        return connected &gt;= 4;</span>
+<span class="fc bfc" id="L114" title="All 2 branches covered.">        return connected &gt;= piecesForWin;</span>
     }
 
+    /**
+     * Check if there are enough pieces belonging to this player directly
+     * to the left and right of the last move to suffice for victory.
+     * @return true if a the found line is long enough for victory otherwise false.
+     */
     private boolean winHorizontal() {
-<span class="fc" id="L65">        int connected = 1;</span>
-<span class="fc bfc" id="L66" title="All 2 branches covered.">        for (int i = lastMoveCol - 1; i &gt;= 0; i--)</span>
-<span class="pc bpc" id="L67" title="1 of 4 branches missed.">            if (field[lastMoveRow][i] == (lastMovePlayerOne ? 1 : 2))</span>
-<span class="fc" id="L68">                connected++;</span>
+<span class="fc" id="L123">        int connected = 1;</span>
+<span class="fc bfc" id="L124" title="All 2 branches covered.">        for (int i = lastMoveCol - 1; i &gt;= 0; i--)</span>
+<span class="pc bpc" id="L125" title="1 of 4 branches missed.">            if (field[lastMoveRow][i] == (lastMovePlayerOne ? 1 : 2))</span>
+<span class="fc" id="L126">                connected++;</span>
             else
                 break;
-<span class="pc bfc" id="L71" title="All 2 branches covered.">        for (int i = lastMoveCol + 1; i &lt; width; i++)</span>
-<span class="pc bpc" id="L72" title="1 of 4 branches missed.">            if (field[lastMoveRow][i] == (lastMovePlayerOne ? 1 : 2))</span>
-<span class="nc" id="L73">                connected++;</span>
+<span class="pc bfc" id="L129" title="All 2 branches covered.">        for (int i = lastMoveCol + 1; i &lt; width; i++)</span>
+<span class="pc bpc" id="L130" title="1 of 4 branches missed.">            if (field[lastMoveRow][i] == (lastMovePlayerOne ? 1 : 2))</span>
+<span class="nc" id="L131">                connected++;</span>
             else
                 break;
-<span class="fc bfc" id="L76" title="All 2 branches covered.">        return connected &gt;= 4;</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">        return connected &gt;= piecesForWin;</span>
     }
 
+    /**
+     * Execute the move for the selected player in the selected column,
+     * that means flipping the bottommost unassigned game tile in that column.
+     * @param playerOne true if it is player one making the move, false for player two.
+     * @param move The ID of the column in which to make a move.
+     * @throws InvalidMoveException The move could not be made because the column
+     * does not exist or is already full.
+     */
     public void makeMove(boolean playerOne, int move) throws InvalidMoveException {
-<span class="fc bfc" id="L80" title="All 4 branches covered.">        if (move &lt; 0 || move &gt;= width)</span>
-<span class="fc" id="L81">            throw new InvalidMoveException(&quot;Invalid move. Column not valid.&quot;);</span>
-<span class="fc" id="L82">        boolean moveMade = false;</span>
-<span class="fc bfc" id="L83" title="All 2 branches covered.">        for (int i = 0; i &lt; height; i++)</span>
-<span class="fc bfc" id="L84" title="All 2 branches covered.">            if (field[i][move] == 0) {</span>
-<span class="fc bfc" id="L85" title="All 2 branches covered.">                field[i][move] = playerOne ? 1 : 2;</span>
-<span class="fc" id="L86">                lastMoveRow = i;</span>
-<span class="fc" id="L87">                moveMade = true;</span>
-<span class="fc" id="L88">                break;</span>
+<span class="fc bfc" id="L146" title="All 4 branches covered.">        if (move &lt; 0 || move &gt;= width)</span>
+<span class="fc" id="L147">            throw new InvalidMoveException(&quot;Invalid move. Column not valid.&quot;);</span>
+<span class="fc" id="L148">        boolean moveMade = false;</span>
+<span class="fc bfc" id="L149" title="All 2 branches covered.">        for (int i = 0; i &lt; height; i++)</span>
+<span class="fc bfc" id="L150" title="All 2 branches covered.">            if (field[i][move] == 0) {</span>
+<span class="fc bfc" id="L151" title="All 2 branches covered.">                field[i][move] = playerOne ? 1 : 2;</span>
+<span class="fc" id="L152">                lastMoveRow = i;</span>
+<span class="fc" id="L153">                moveMade = true;</span>
+<span class="fc" id="L154">                break;</span>
             }
-<span class="fc bfc" id="L90" title="All 2 branches covered.">        if (!moveMade)</span>
-<span class="fc" id="L91">            throw new InvalidMoveException(&quot;Invalid move. Column already full.&quot;);</span>
-<span class="fc" id="L92">        lastMovePlayerOne = playerOne;</span>
-<span class="fc" id="L93">        lastMoveCol = move;</span>
-<span class="fc" id="L94">    }</span>
+<span class="fc bfc" id="L156" title="All 2 branches covered.">        if (!moveMade)</span>
+<span class="fc" id="L157">            throw new InvalidMoveException(&quot;Invalid move. Column already full.&quot;);</span>
+<span class="fc" id="L158">        lastMovePlayerOne = playerOne;</span>
+<span class="fc" id="L159">        lastMoveCol = move;</span>
+<span class="fc" id="L160">    }</span>
 
+    /**
+     * Check whether the whole board has been filled without achieving victory.
+     * Thus the game ends in a draw.
+     * @return true if the game board has no more unassigned tiles.
+     */
     public boolean isFull() {
-<span class="fc bfc" id="L97" title="All 2 branches covered.">        for (int i = 0; i &lt; width; i++)</span>
-<span class="fc bfc" id="L98" title="All 2 branches covered.">            if (field[height - 1][i] == 0)</span>
-<span class="fc" id="L99">                return false;</span>
-<span class="fc" id="L100">        return true;</span>
+<span class="fc bfc" id="L168" title="All 2 branches covered.">        for (int i = 0; i &lt; width; i++)</span>
+<span class="fc bfc" id="L169" title="All 2 branches covered.">            if (field[height - 1][i] == 0)</span>
+<span class="fc" id="L170">                return false;</span>
+<span class="fc" id="L171">        return true;</span>
     }
 
+    /**
+     * Check which player is victorious
+     * @return True if player one has won, false for player two.
+     * @throws InvalidStateException The game ended in tie or is not over yet.
+     */
     public boolean winnerPlayerOne() throws InvalidStateException {
-<span class="fc bfc" id="L104" title="All 4 branches covered.">        if (isFull() || isNotOver())</span>
-<span class="fc" id="L105">            throw new InvalidStateException(&quot;Game did not end decisively&quot;);</span>
-<span class="fc" id="L106">        return lastMovePlayerOne;</span>
+<span class="fc bfc" id="L180" title="All 4 branches covered.">        if (isFull() || isNotOver())</span>
+<span class="fc" id="L181">            throw new InvalidStateException(&quot;Game did not end decisively&quot;);</span>
+<span class="fc" id="L182">        return lastMovePlayerOne;</span>
     }
 
+    /**
+     * Generate a String representation of the game board
+     * consisting of '_' for empty tiles.
+     * 'x' for player one and 'o' for player two.
+     * @return Representation of the game board.
+     */
     @Override
     public String toString() {
-<span class="fc" id="L111">        StringBuilder display = new StringBuilder();</span>
-<span class="fc bfc" id="L112" title="All 2 branches covered.">        for (int i = height - 1; i &gt;= 0; i--) {</span>
-<span class="fc bfc" id="L113" title="All 2 branches covered.">            for (int j = 0; j &lt; width; j++)</span>
-<span class="fc bfc" id="L114" title="All 2 branches covered.">                if (field[i][j] == 0)</span>
-<span class="fc" id="L115">                    display.append(&quot;_ &quot;);</span>
+<span class="fc" id="L193">        StringBuilder display = new StringBuilder();</span>
+<span class="fc bfc" id="L194" title="All 2 branches covered.">        for (int i = height - 1; i &gt;= 0; i--) {</span>
+<span class="fc bfc" id="L195" title="All 2 branches covered.">            for (int j = 0; j &lt; width; j++)</span>
+<span class="fc bfc" id="L196" title="All 2 branches covered.">                if (field[i][j] == 0)</span>
+<span class="fc" id="L197">                    display.append(&quot;_ &quot;);</span>
                 else
-<span class="fc bfc" id="L117" title="All 2 branches covered.">                    display.append(field[i][j] == 1 ? &quot;x &quot; : &quot;o &quot;);</span>
-<span class="fc" id="L118">            display.append(&quot;\n&quot;);</span>
+<span class="fc bfc" id="L199" title="All 2 branches covered.">                    display.append(field[i][j] == 1 ? &quot;x &quot; : &quot;o &quot;);</span>
+<span class="fc" id="L200">            display.append(&quot;\n&quot;);</span>
         }
-<span class="fc bfc" id="L120" title="All 2 branches covered.">        for (int i = 1; i &lt;= width; i++)</span>
-<span class="fc" id="L121">            display.append(i).append(&quot; &quot;);</span>
-<span class="fc" id="L122">        return display.toString();</span>
+<span class="fc bfc" id="L202" title="All 2 branches covered.">        for (int i = 1; i &lt;= width; i++)</span>
+<span class="fc" id="L203">            display.append(i).append(&quot; &quot;);</span>
+<span class="fc" id="L204">        return display.toString();</span>
 
 
     }
 
+    /**
+     * Custom Exception for Illegal moves selected by players.
+     */
     public static class InvalidMoveException extends Exception {
+        /**
+         * Initializes this Exception.
+         * @param s message for the exception.
+         */
         InvalidMoveException(String s) {
-<span class="fc" id="L129">            super(s);</span>
-<span class="fc" id="L130">        }</span>
+<span class="fc" id="L218">            super(s);</span>
+<span class="fc" id="L219">        }</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

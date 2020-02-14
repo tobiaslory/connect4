@@ -1,15 +1,15 @@
 
 5org.connect4.Connect4#isEndGame(Ljava/util/Scanner;)ZE
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.java5 5($"6"1*±
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaB B($"6"1*±
 2E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaA A(r
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaN N(r
 p
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaA A(
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaN N(
 %5java.io.PrintStream"__id*
 ""èå
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaA A(F
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaN N(F
 
 %6void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
@@ -18,9 +18,9 @@ E
 6
 1*´
 4E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.java= =(ÜÙ
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaJ J(ÜÙ
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.java= =(3
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaJ J(3
 %4boolean"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
 
 answerjava.lang.String*
@@ -29,32 +29,32 @@ E
 6
 1*Ñ
 6E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.java9 9(r
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaF F(r
 p
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.java9 9(
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaF F(
 %0java.io.PrintStream"__id*
 ""àÝ
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.java9 9(:
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaF F(:
 
 %1void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
 %0java.io.PrintStream*
 Start a new round?(y/n):2println(Ljava/lang/String;)º·
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.java: :(.
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaG G(.
 %2java.lang.String"*java.util.Scanner#next()Ljava/lang/String;*"
  
 inputReaderjava.util.Scanner2next()†
 ƒ
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.java: :(/
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaG G(/
 answerjava.lang.String"__id*
 
 %2java.lang.StringÜÙ
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.java; ;(,
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaH H(,
 %3boolean"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
 
 answerjava.lang.String*
@@ -63,9 +63,9 @@ E
 6
 1*›
 1E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaD D("O
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaQ Q("O
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaD D(
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaQ Q(
 "": 
 inputReaderjava.util.ScannerB"
 org.connect4.Connect4

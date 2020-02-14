@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.connect4.PlayerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-13T12:27:01" hostname="DESKTOP-0J7K87I" time="0.005">
+<testsuite name="org.connect4.PlayerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-14T08:18:07" hostname="DESKTOP-0J7K87I" time="0.072">
   <properties/>
-  <testcase name="getMove()" classname="org.connect4.PlayerTest" time="0.005"/>
+  <testcase name="getMove()" classname="org.connect4.PlayerTest" time="0.072"/>
   <system-out><![CDATA[Player 1: Enter Column:
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

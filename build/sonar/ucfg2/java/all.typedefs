@@ -487,16 +487,15 @@ valueOf(J)-java.lang.String#valueOf(J)Ljava/lang/String;2
 checkIndex(II) java.lang.String#checkIndex(II)VX
 !<init>(Ljava/lang/StringBuilder;)3java.lang.String#<init>(Ljava/lang/StringBuilder;)V%
 value()java.lang.String#value()[B`
-%regionMatches(ZILjava/lang/String;II)7java.lang.String#regionMatches(ZILjava/lang/String;II)Z÷
+%regionMatches(ZILjava/lang/String;II)7java.lang.String#regionMatches(ZILjava/lang/String;II)Zù
 org.connect4.GameBoardjava.lang.Object:
 winHorizontal()'org.connect4.GameBoard#winHorizontal()Z>
 winnerPlayerOne())org.connect4.GameBoard#winnerPlayerOne()Z,
-isFull() org.connect4.GameBoard#isFull()Z0
-
-<init>(II)"org.connect4.GameBoard#<init>(II)VA
+isFull() org.connect4.GameBoard#isFull()ZA
 
 toString()3org.connect4.GameBoard#toString()Ljava/lang/String;@
-winDiagonalSlash()*org.connect4.GameBoard#winDiagonalSlash()Z6
+winDiagonalSlash()*org.connect4.GameBoard#winDiagonalSlash()Z2
+<init>(III)#org.connect4.GameBoard#<init>(III)V6
 winVertical()%org.connect4.GameBoard#winVertical()ZH
 winDiagonalBackslash().org.connect4.GameBoard#winDiagonalBackslash()Z2
 isNotOver()#org.connect4.GameBoard#isNotOver()Z4

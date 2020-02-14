@@ -1,15 +1,15 @@
 
 6org.connect4.Connect4#isVersusAi(Ljava/util/Scanner;)ZE
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaG G(%"5"1*¿
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaY Y(%"5"1*¿
 2E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaQ Q(r
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javac c(r
 p
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaQ Q(
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javac c(
 %3java.io.PrintStream"__id*
 ""öó
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaQ Q(T
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javac c(T
 
 %4void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
@@ -18,21 +18,21 @@ E
 5
 1*Ü
 5E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaK K(r
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.java] ](r
 p
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaK K(
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.java] ](
 %0java.io.PrintStream"__id*
 ""ëè
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaK K(E
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.java] ](E
 
 %1void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
 %0java.io.PrintStream*'%
 #Enter number of human players(1-2):2println(Ljava/lang/String;)¢Ÿ
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaL" L(7	
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.java^" ^(7	
 %2int"java.util.Scanner#nextInt()I*"
  
 inputReaderjava.util.Scanner2	nextInt()*	
@@ -40,9 +40,9 @@ E
 5
 1*›
 1E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaT T("O
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaf f("O
 E
-;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaT T(
+;C:/data_science/swt/connect4/src/org/connect4/Connect4.javaf f(
 "": 
 inputReaderjava.util.ScannerB"
 org.connect4.Connect4

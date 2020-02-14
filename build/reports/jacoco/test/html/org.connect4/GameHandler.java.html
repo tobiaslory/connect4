@@ -3,47 +3,99 @@
 import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
+/**
+ * This class holds the different game elements and provides
+ * methods for the game flow.
+ * @author Tobias Lory
+ */
 class GameHandler {
+    /**
+     * Default game board width.
+     */
+    private static final int gameWidth = 7;
+    /**
+     * Default game board height.
+     */
+    private static final int gameHeight = 6;
+    /**
+     * Default number of pieces in a line for win.
+     */
+    private static final int piecesForWin = 4;
+    /**
+     * Instance of the game board.
+     */
     private final GameBoard board;
+    /**
+     * Player instance for the human player.
+     */
     private final Player playerOne;
+    /**
+     * Player instance for the second player.
+     */
     private final Player playerTwo;
+    /**
+     * Stores current turn information, if true it is player one's turn.
+     */
     private boolean playerOneTurn;
 
-<span class="fc" id="L12">    GameHandler(boolean versusAi) throws NoSuchAlgorithmException {</span>
-<span class="fc" id="L13">        board = new GameBoard(7, 6);</span>
-<span class="fc" id="L14">        playerOne = new Player(false, &quot;Player 1&quot;);</span>
-<span class="fc" id="L15">        playerTwo = new Player(versusAi, &quot;Player 2&quot;);</span>
-<span class="fc" id="L16">        playerOneTurn = true;</span>
-<span class="fc" id="L17">    }</span>
+    /**
+     * Initializes the game board at 7x6 Rectangle and the 2 players.
+     * @param versusAi Whether the second player will be controlled by AI or a human
+     * @throws NoSuchAlgorithmException Player could not be created because no RNG exists
+     */
+<span class="fc" id="L46">    GameHandler(boolean versusAi) throws NoSuchAlgorithmException {</span>
+<span class="fc" id="L47">        board = new GameBoard(gameWidth, gameHeight, piecesForWin);</span>
+<span class="fc" id="L48">        playerOne = new Player(false, &quot;Player 1&quot;);</span>
+<span class="fc" id="L49">        playerTwo = new Player(versusAi, &quot;Player 2&quot;);</span>
+<span class="fc" id="L50">        playerOneTurn = true;</span>
+<span class="fc" id="L51">    }</span>
 
+    /**
+     * Information about game still ongoing.
+     * @return true if the game is still going. false if the game is decided.
+     */
     boolean isNotOver() {
-<span class="fc" id="L20">        return board.isNotOver();</span>
+<span class="fc" id="L58">        return board.isNotOver();</span>
     }
 
+    /**
+     * Asks the current player for a move, executes it on the board and flips current player.
+     * @param inputReader The Scanner object for receiving player input.
+     * @throws GameBoard.InvalidMoveException Input move could not be executed because it is invalid.
+     */
     void makeMove(Scanner inputReader) throws GameBoard.InvalidMoveException {
-<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (playerOneTurn) {</span>
-<span class="fc" id="L25">            board.makeMove(true, playerOne.getMove(inputReader, 7));</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        if (playerOneTurn) {</span>
+<span class="fc" id="L68">            board.makeMove(true, playerOne.getMove(inputReader, gameWidth));</span>
         } else {
-<span class="fc" id="L27">            board.makeMove(false, playerTwo.getMove(inputReader, 7));</span>
+<span class="fc" id="L70">            board.makeMove(false, playerTwo.getMove(inputReader, gameWidth));</span>
         }
-<span class="fc bfc" id="L29" title="All 2 branches covered.">        playerOneTurn = !playerOneTurn;</span>
-<span class="fc" id="L30">    }</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">        playerOneTurn = !playerOneTurn;</span>
+<span class="fc" id="L73">    }</span>
 
+    /**
+     * Generates a message about the end of the game depending on the current game state.
+     * @return A message containing information about the winner if any.
+     * @throws InvalidStateException The game is not over yet.
+     */
     String getWinner() throws InvalidStateException {
-<span class="fc bfc" id="L33" title="All 2 branches covered.">        if (isNotOver())</span>
-<span class="fc" id="L34">            throw new InvalidStateException(&quot;Game is not over yet.&quot;);</span>
-<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (board.isFull())</span>
-<span class="fc" id="L36">            return &quot;Board is full. Game ends in Tie.&quot;;</span>
-<span class="fc" id="L37">        boolean playerOneWon = board.winnerPlayerOne();</span>
-<span class="fc bfc" id="L38" title="All 2 branches covered.">        if (playerOneWon)</span>
-<span class="fc" id="L39">            return &quot;Game is Over. Winner is Player 1.&quot;;</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">        if (isNotOver())</span>
+<span class="fc" id="L82">            throw new InvalidStateException(&quot;Game is not over yet.&quot;);</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if (board.isFull())</span>
+<span class="fc" id="L84">            return &quot;Board is full. Game ends in Tie.&quot;;</span>
+<span class="fc" id="L85">        boolean playerOneWon = board.winnerPlayerOne();</span>
+<span class="fc bfc" id="L86" title="All 2 branches covered.">        if (playerOneWon)</span>
+<span class="fc" id="L87">            return &quot;Game is Over. Winner is Player 1.&quot;;</span>
         else
-<span class="fc" id="L41">            return &quot;Game is Over. Winner is Player 2.&quot;;</span>
+<span class="fc" id="L89">            return &quot;Game is Over. Winner is Player 2.&quot;;</span>
     }
 
+    /**
+     * The state of the game is displayed by the game board.
+     * @return A representation of the board.
+     */
     @Override
     public String toString() {
-<span class="fc" id="L46">        return board.toString();</span>
+<span class="fc" id="L98">        return board.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

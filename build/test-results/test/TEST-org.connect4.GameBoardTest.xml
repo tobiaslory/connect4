@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.connect4.GameBoardTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2020-02-13T12:27:01" hostname="DESKTOP-0J7K87I" time="0.14">
+<testsuite name="org.connect4.GameBoardTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2020-02-14T08:18:07" hostname="DESKTOP-0J7K87I" time="0.344">
   <properties/>
-  <testcase name="isFull()" classname="org.connect4.GameBoardTest" time="0.037"/>
-  <testcase name="winSlash()" classname="org.connect4.GameBoardTest" time="0.001"/>
-  <testcase name="testToString()" classname="org.connect4.GameBoardTest" time="0.063"/>
-  <testcase name="winnerPlayerOne()" classname="org.connect4.GameBoardTest" time="0.006"/>
+  <testcase name="isFull()" classname="org.connect4.GameBoardTest" time="0.131"/>
+  <testcase name="winSlash()" classname="org.connect4.GameBoardTest" time="0.003"/>
+  <testcase name="testToString()" classname="org.connect4.GameBoardTest" time="0.158"/>
+  <testcase name="winnerPlayerOne()" classname="org.connect4.GameBoardTest" time="0.009"/>
   <testcase name="winHorizontal()" classname="org.connect4.GameBoardTest" time="0.001"/>
-  <testcase name="makeMove()" classname="org.connect4.GameBoardTest" time="0.003"/>
-  <testcase name="OverFull()" classname="org.connect4.GameBoardTest" time="0.005"/>
-  <testcase name="isNotOver()" classname="org.connect4.GameBoardTest" time="0.002"/>
+  <testcase name="makeMove()" classname="org.connect4.GameBoardTest" time="0.005"/>
+  <testcase name="OverFull()" classname="org.connect4.GameBoardTest" time="0.004"/>
+  <testcase name="isNotOver()" classname="org.connect4.GameBoardTest" time="0.001"/>
   <testcase name="winBackslash()" classname="org.connect4.GameBoardTest" time="0.001"/>
-  <testcase name="winnerFull()" classname="org.connect4.GameBoardTest" time="0.003"/>
+  <testcase name="winnerFull()" classname="org.connect4.GameBoardTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

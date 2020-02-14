@@ -1,0 +1,10 @@
+-classpath 'C:\\data_science\\swt\\connect4\\build\\classes\\java\\main;C:\\data_science\\swt\\connect4\\build\\resources\\main;C:\\Users\\Tobias Lory\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter\\5.5.2\\f8561a498ec26b24a3a64aebb6b2307fed000a33\\junit-jupiter-5.5.2.jar;C:\\Users\\Tobias Lory\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-params\\5.5.2\\e0659722923bd9fdfa08602e2da22bd5a9d354e8\\junit-jupiter-params-5.5.2.jar;C:\\Users\\Tobias Lory\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-api\\5.5.2\\6393db7e4c0265152d8fc4ff146633d1a7d36c47\\junit-jupiter-api-5.5.2.jar;C:\\Users\\Tobias Lory\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.platform\\junit-platform-commons\\1.5.2\\9703df63b65d415b2a027d43ce908c625b3aedce\\junit-platform-commons-1.5.2.jar;C:\\Users\\Tobias Lory\\.gradle\\caches\\modules-2\\files-2.1\\org.apiguardian\\apiguardian-api\\1.1.0\\fc9dff4bb36d627bdc553de77e1f17efd790876c\\apiguardian-api-1.1.0.jar;C:\\Users\\Tobias Lory\\.gradle\\caches\\modules-2\\files-2.1\\org.opentest4j\\opentest4j\\1.2.0\\28c11eb91f9b6d8e200631d46e20a7f407f2a046\\opentest4j-1.2.0.jar'
+-d 'C:\\data_science\\swt\\connect4\\build\\docs\\javadoc'
+-doctitle 'connect4 API'
+-quiet 
+-windowtitle 'connect4 API'
+'C:\\data_science\\swt\\connect4\\src\\org\\connect4\\Connect4.java'
+'C:\\data_science\\swt\\connect4\\src\\org\\connect4\\GameBoard.java'
+'C:\\data_science\\swt\\connect4\\src\\org\\connect4\\GameHandler.java'
+'C:\\data_science\\swt\\connect4\\src\\org\\connect4\\InvalidStateException.java'
+'C:\\data_science\\swt\\connect4\\src\\org\\connect4\\Player.java'
