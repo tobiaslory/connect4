@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 /**
  * @author Tobias Lory
  */
-class Connect4 {
+public class Connect4 {
     private static final Logger log = Logger.getLogger(Connect4.class.getName());
 
     /**

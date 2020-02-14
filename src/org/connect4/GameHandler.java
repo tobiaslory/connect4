@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Tobias Lory
  */
-class GameHandler {
+public class GameHandler {
     /**
      * Default game board width.
      */
@@ -45,7 +45,7 @@ class GameHandler {
      * @param versusAi Whether the second player will be controlled by AI or a human
      * @throws NoSuchAlgorithmException Player could not be created because no RNG exists
      */
-    GameHandler(boolean versusAi) throws NoSuchAlgorithmException {
+    public GameHandler(boolean versusAi) throws NoSuchAlgorithmException {
         board = new GameBoard(GAME_WIDTH, GAME_HEIGHT, PIECES_FOR_WIN);
         playerOne = new Player(false, "Player 1");
         playerTwo = new Player(versusAi, "Player 2");
@@ -57,7 +57,7 @@ class GameHandler {
      *
      * @return true if the game is still going. false if the game is decided.
      */
-    boolean isNotOver() {
+    public boolean isNotOver() {
         return board.isNotOver();
     }
 
@@ -67,7 +67,7 @@ class GameHandler {
      * @param inputReader The Scanner object for receiving player input.
      * @throws GameBoard.InvalidMoveException Input move could not be executed because it is invalid.
      */
-    void makeMove(Scanner inputReader) throws GameBoard.InvalidMoveException {
+    public void makeMove(Scanner inputReader) throws GameBoard.InvalidMoveException {
         if (playerOneTurn) {
             board.makeMove(true, playerOne.getMove(inputReader, GAME_WIDTH));
         } else {
@@ -82,7 +82,7 @@ class GameHandler {
      * @return A message containing information about the winner if any.
      * @throws InvalidStateException The game is not over yet.
      */
-    String getWinner() throws InvalidStateException {
+    public String getWinner() throws InvalidStateException {
         if (isNotOver())
             throw new InvalidStateException("Game is not over yet.");
         if (board.isFull())

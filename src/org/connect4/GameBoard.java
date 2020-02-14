@@ -226,7 +226,7 @@ public class GameBoard {
          *
          * @param s message for the exception.
          */
-        InvalidMoveException(String s) {
+        public InvalidMoveException(String s) {
             super(s);
         }
     }

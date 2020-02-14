@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Tobias Lory
  */
-class Player {
+public class Player {
     /**
      * is this player controlled by an AI or human.
      */
@@ -32,7 +32,7 @@ class Player {
      * @param name A string representation for this player
      * @throws NoSuchAlgorithmException The RNG could not be created
      */
-    Player(boolean isAi, String name) throws NoSuchAlgorithmException {
+    public Player(boolean isAi, String name) throws NoSuchAlgorithmException {
         this.isAi = isAi;
         this.name = name;
         move = SecureRandom.getInstanceStrong();
@@ -45,7 +45,7 @@ class Player {
      * @param boardWidth  the number of columns to choose from.
      * @return The move the player wants to make.
      */
-    int getMove(Scanner inputReader, int boardWidth) {
+    public int getMove(Scanner inputReader, int boardWidth) {
         if (isAi)
             return getMoveAi(boardWidth);
         else
